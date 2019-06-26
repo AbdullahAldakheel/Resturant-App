@@ -17,8 +17,6 @@ const cacheComponents = [
     '/img/9.jpg',
     '/img/10.jpg',
     '/data/restaurants.json',
-    '/css/media-query.css',
-    '/css/media-query-reviews.css',
     '/css/styles.css'
  ];
 
@@ -67,13 +65,13 @@ self.addEventListener('activate', event => {
 
 //Call Fetch Event (Fetching the entire Site)
 
-self.addEventListener('fetch', event => {
-   console.log('Service Worker: Fetching from Cache');
-   event.respondWith(
-       fetch(event.request)
-       .catch((err) => caches.match(event.request)));
+// self.addEventListener('fetch', event => {
+//    console.log('Service Worker: Fetching from Cache');
+//    event.respondWith(
+//        fetch(event.request)
+//        .catch((err) => caches.match(event.request)));
 
-});
+// });
 
 
 self.addEventListener('fetch', event => {
